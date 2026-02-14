@@ -75,7 +75,8 @@ export default function GalaxyViewer() {
       </Suspense>
 
       {/* Info Panel */}
-      <div className="absolute top-4 left-4 text-white bg-black/50 backdrop-blur-sm rounded-lg p-4 max-w-sm border border-white/10 shadow-xl">
+      {/* Info Panel */}
+      <div className="absolute top-4 left-4 text-white bg-black/50 backdrop-blur-sm rounded-lg p-4 max-w-sm border border-white/10 shadow-xl origin-top-left scale-[0.6] md:scale-100 transition-transform duration-300">
         <h1 className="text-xl font-bold mb-2">Milky Way Galaxy Viewer</h1>
         <p className="text-sm text-gray-300 mb-2">
           Explore our galaxy in 3D space with realistic spiral structure and star distribution.

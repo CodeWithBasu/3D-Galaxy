@@ -2,6 +2,7 @@
 
 import { FC, useEffect, useRef, useState } from "react"
 import { motion, useSpring } from "motion/react"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 interface Position {
   x: number
@@ -89,6 +90,7 @@ export function SmoothCursor({
     restDelta: 0.001,
   },
 }: SmoothCursorProps) {
+  const isMobile = useIsMobile()
   const [isMoving, setIsMoving] = useState(false)
   const lastMousePos = useRef<Position>({ x: 0, y: 0 })
   const velocity = useRef<Position>({ x: 0, y: 0 })
@@ -110,6 +112,8 @@ export function SmoothCursor({
   })
 
   useEffect(() => {
+    if (isMobile) return
+
     const updateVelocity = (currentPos: Position) => {
       const currentTime = Date.now()
       const deltaTime = currentTime - lastUpdateTime.current
@@ -178,7 +182,9 @@ export function SmoothCursor({
       document.body.style.cursor = "auto"
       if (rafId) cancelAnimationFrame(rafId)
     }
-  }, [cursorX, cursorY, rotation, scale])
+  }, [cursorX, cursorY, rotation, scale, isMobile])
+
+  if (isMobile) return null
 
   return (
     <motion.div

@@ -114,7 +114,7 @@ Ready to launch your own galaxy? Follow these steps:
 **BASUDEV**
 
 <div>
-  <a href="https://github.com/yourusername">
+  <a href="https://github.com/CodeWithBasu">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </div>

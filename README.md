@@ -122,5 +122,5 @@ Ready to launch your own galaxy? Follow these steps:
 ---
 
 <div align="center">
-  <i>Created with ❤️ by Basudev</i>
+  <i>Created with ❤️ by Basudev 🧑‍💻</i>
 </div>
